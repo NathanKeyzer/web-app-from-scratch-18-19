@@ -37,6 +37,17 @@ Doel: Data manipuleren. Code splitsen in modules. Reflecteren op eindresultaat.
 [Slides](https://drive.google.com/open?id=1BSzGYNLMgtHD4HRnK7f0DgyTv4Pg3xsQwD_eYNo7v0Y)
 
 
+## My web App
+
+* linkToLiveDemo ? review(assignment) : assignGrade(1);
+* Wat doet jou app, wat is het doel? (passing butter)
+* Welke actoren zitten er in jouw applicatie? (actor diagram)
+* Welke API wordt gebruikt en wat zijn de beperkingen? (rate limit)
+* Hoe flowed interactie door de applicatie? (interaction diagram)
+* Welke design patterns en best practices
+* Wat zou je nog willen toevoegen (feature wishlist / backlog)
+
+
 <!-- Add a link to your live demo in Github Pages 🌐-->
 
 <!-- ☝️ replace this description with a description of your own work -->
