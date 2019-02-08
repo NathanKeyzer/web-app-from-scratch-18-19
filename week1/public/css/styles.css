@@ -1,0 +1,61 @@
+/*
+========================================================
+    GENERAL
+========================================================
+*/
+body{
+  background-color: #313E5F;
+}
+main{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+section{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  transition: position 2s;
+  border-radius: 1em;
+  width: 424.844px;
+  background-color: white;
+  margin-right: 1em;
+  margin-bottom: 1em;
+
+}
+section:hover{
+  transform: translateX(1em);
+  transition: all .2s linear;
+}
+div{
+  display: block;
+}
+img{
+  padding: 0 5px 0px 0;
+  border-radius:1em 0 0 1em;
+}
+/*
+========================================================
+    FONT
+========================================================
+*/
+h1{
+  color: #FF6B6B;
+  font-family: arial;
+  font-size: 2em;
+}
+h2{
+  color:#FF6B6B;
+  font-family: arial;
+  font-size: 1em;
+  align-items: center;
+  padding: 0 5px;
+}
+p{
+  font-family: arial;
+  font-size: 1em;
+  color: #FF6B6B;
+  flex-direction: column;
+  justify-content: space-between;
+  padding:0 5px;
+}
