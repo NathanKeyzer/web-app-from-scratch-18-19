@@ -19,7 +19,8 @@ My JSON [API](https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&use
 ```javascript
 var element = document.querySelector('main')
 var request = new XMLHttpRequest();
-var apiLink = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=nathankeyzer&api_key=558413ce30002869acf1d2e2d9c2047b&format=json&page=1';```
+var apiLink = 'https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=nathankeyzer&api_key=558413ce30002869acf1d2e2d9c2047b&format=json&page=1';
+```
 
 
 ## Interaction
