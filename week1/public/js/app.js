@@ -37,6 +37,7 @@
 
   const render = {
     songList: data => {
+      element.innerHTML = '';
       console.log('render.songList gebruikt: ' + data);
       data.recenttracks.track.forEach(song => {
         let template = `
@@ -63,11 +64,17 @@
   };
 
   //begin van routie
-
+  const router = {};
   api.getData(url).then(data => {
     render.songList(data);
     render.currentUser(data);
   });
+
+  setInterval(function() {
+    api.getData(url).then(data => {
+      render.songList(data);
+    });
+  }, 25000);
 
   // api.getData(url).then((data) => {
   //   render.singleSong(data.song[0])

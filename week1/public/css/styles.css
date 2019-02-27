@@ -3,15 +3,15 @@
     GENERAL
 ========================================================
 */
-body{
-  background-color: #313E5F;
+body {
+  background-color: #313e5f;
 }
-main{
+main {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
 }
-section{
+section {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -20,11 +20,34 @@ section{
   background-color: white;
   margin: 0 1em 1em 0;
 }
-section:hover{
-  transform: translateX(1em);
-  transition: all .2s linear;
+section:first-of-type {
+  animation: pulse 3s infinite;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+  animation-fill-mode: none;
+  animation-play-state: running;
 }
-div{
+section:first-of-type p:last-of-type {
+  color: #1db954;
+}
+@keyframes pulse {
+  0% {
+    transform: scale(0.9);
+    /* background-color: #1db954; */
+  }
+  100% {
+    transform: scale(1);
+    /* background-color: #1ed760; */
+  }
+}
+section:hover {
+  transform: translateX(1em);
+  transition: all 0.2s linear;
+}
+div {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -32,33 +55,33 @@ div{
   align-content: center;
   width: 300px;
 }
-img{
+img {
   /* padding: 0 5px 0px 0; */
-  border-radius:1em 0 0 1em;
+  border-radius: 1em 0 0 1em;
 }
 /*
 ========================================================
     FONT
 ========================================================
 */
-h1{
-  color: #FF6B6B;
+h1 {
+  color: #ff6b6b;
   font-family: arial;
   font-size: 2em;
 }
-h2{
-  color:#FF6B6B;
+h2 {
+  color: #ff6b6b;
   font-family: arial;
   font-size: 1em;
   padding: 0 5px;
   margin: 0 0 5px 0;
 }
-p{
+p {
   font-family: arial;
   font-size: 1em;
-  color: #FF6B6B;
+  color: #ff6b6b;
   flex-direction: column;
   justify-content: space-between;
-  padding:0 5px;
+  padding: 0 5px;
   margin: 5px 0 0 0;
 }
