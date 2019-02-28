@@ -44,7 +44,7 @@
         let template = `
       <section>
       <a href="${song.url}" target="blank"> <img src="${
-          song.image[3]['#text'] ? song.image[3]['#text'] : 'public/img/300.png'
+          song.image[2]['#text'] ? song.image[2]['#text'] : 'public/img/174.png'
         }"></a>
         <div>
           <h2>${song.name}</h2>
@@ -79,7 +79,7 @@
         let template = `
       <section>
       <a href="" target="blank"> <img src="${
-        song.image[3]['#text'] ? song.image[3]['#text'] : 'public/img/300.png'
+        song.image[2]['#text'] ? song.image[2]['#text'] : 'public/img/174.png'
       }"></a>
         <div>
           <h2>${song.name}</h2>
