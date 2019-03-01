@@ -4,10 +4,10 @@ const render = {
   nav: document.querySelectorAll('header a'),
   songList: data => {
     render.element.innerHTML = '';
-    console.log('render.songList gebruikt: ' + data);
+
     data.recenttracks.track.forEach(song => {
       let template = `
-    <section>
+    <section class="nowPlaying">
     <a href="${song.url}" target="blank"> <img src="${
         song.image[2]['#text'] ? song.image[2]['#text'] : 'public/img/174.png'
       }"></a>
@@ -20,7 +20,6 @@ const render = {
       `;
       render.element.innerHTML += template;
     });
-    console.log(data);
   },
   currentUser: data => {
     let tracks;
@@ -37,7 +36,7 @@ const render = {
   },
   topTracks: data => {
     render.element.innerHTML = '';
-    console.log('render.songList gebruikt: ' + data);
+
     data.toptracks.track.forEach(song => {
       let template = `
     <section>
@@ -48,13 +47,11 @@ const render = {
         <h2>${song.name}</h2>
         <p>${song.artist.name}</p>
         <p> ${song.playcount}</P>
-
       </div>
     </section>
       `;
       render.element.innerHTML += template;
     });
-    console.log(data);
   },
   loading: () => {
     render.element.innerHTML = `

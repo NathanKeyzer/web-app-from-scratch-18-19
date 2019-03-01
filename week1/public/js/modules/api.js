@@ -5,19 +5,13 @@ const api = {
       request.open('GET', url, true);
       request.onload = () => {
         if (request.status >= 200 && request.status < 400) {
-          // Success!
           const data = JSON.parse(request.responseText);
           resolve(data);
         } else {
-          // We reached our target server, but it returned an error
           reject(error);
         }
       };
-
-      request.onerror = () => {
-        // There was a connection error of some sort
-      };
-
+      request.onerror = () => {};
       request.send();
     });
   }

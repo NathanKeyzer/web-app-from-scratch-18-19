@@ -19,14 +19,5 @@ import router from './modules/router.js';
       render.currentUser(data);
     });
   }
-
-  // setInterval(function() {
-  //   api.getData(url).then(data => {
-  //     render.songList(data);
-  //   });
-  // }, 2000);
-  // api.getData(url).then((data) => {
-  //   render.singleSong(data.song[0])
-  // })
   init();
 })();
