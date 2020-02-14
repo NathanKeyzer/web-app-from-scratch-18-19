@@ -60,8 +60,19 @@ section {
   }
 }
 section:hover {
-  transform: translateX(1em);
-  transition: all 0.2s linear;
+    transform:scale(1.1);
+  /* transform: translateX(1em); */
+    transition: all 0.2s linear;
+}
+section.detail{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    transition: position 2s;
+    border-radius: 1rem;
+    background-color: white;
+    margin: 0 1em 1em 0;
+    transform: none;
 }
 div {
   display: flex;

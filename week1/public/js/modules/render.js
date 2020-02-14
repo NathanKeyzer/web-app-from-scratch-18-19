@@ -8,9 +8,9 @@ const render = {
     data.recenttracks.track.forEach(song => {
       let template = `
     <section class="nowPlaying">
-    <a href="${song.url}" target="blank"> <img src="${
-        song.image[2]['#text'] ? song.image[2]['#text'] : 'public/img/174.png'
-      }"></a>
+    <a href="#detail/${song.artist['#text']}/${song.name}"> <img src="${
+      song.image[2]['#text'] ? song.image[2]['#text'] : 'public/img/174.png'
+    }"></a>
       <div>
         <h2>${song.name}</h2>
         <p>${song.artist['#text']}</p>
@@ -28,9 +28,10 @@ const render = {
     } else {
       tracks = 'toptracks';
     }
+    console.log(data);
     if (data[tracks]['@attr'].user) {
-      render.nav[0].href = '#user/' + data[tracks]['@attr'].user + '/top';
-      render.nav[1].href = '#user/' + data[tracks]['@attr'].user + '/recent';
+      render.nav[0].href = `#top?user=${data[tracks]['@attr'].user}`;
+      render.nav[1].href = `#recent?user=${data[tracks]['@attr'].user}`;
       render.user.innerHTML = 'Current user: ' + data[tracks]['@attr'].user;
     }
   },
@@ -40,9 +41,9 @@ const render = {
     data.toptracks.track.forEach(song => {
       let template = `
     <section>
-    <a href="" target="blank"> <img src="${
-      song.image[2]['#text'] ? song.image[2]['#text'] : 'public/img/174.png'
-    }"></a>
+    <a href="${song.url}" target="blank"> <img src="${
+        song.image[2]['#text'] ? song.image[2]['#text'] : 'public/img/174.png'
+      }"></a>
       <div>
         <h2>${song.name}</h2>
         <p>${song.artist.name}</p>
@@ -60,7 +61,28 @@ const render = {
       <div class="double-bounce2"></div>
     </div>`;
   },
-  singleSong: data => {}
+  detailSong: data => {
+
+    console.log(data);
+    render.element.innerHTML = '';
+     // const check = data.track.album.image[3]
+     const check = data.track.album ? data.track.album : null
+     console.log(check);
+
+      let template = `
+      <section class="detail">
+      <img src="${
+         check !== null ? data.track.album.image[3]['#text'] : 'public/img/300.png'
+      }">
+        <div>
+          <h2>${data.track.name}</h2>
+          <p>${data.track.artist.name}</p>
+        </div>
+      </section>
+        `;
+      render.element.innerHTML += template;
+
+  }
 };
 
 export default render;
